@@ -55,8 +55,8 @@ public class IntToLcd {
                 arrayStringDigit = new String[0];
                 break;
         }
-        arrayStringDigit = convertArrayStringDigitWithWidth(arrayStringDigit, width);
         arrayStringDigit = convertArrayStringDigitWithHeight(arrayStringDigit, height);
+        arrayStringDigit = convertArrayStringDigitWithWidth(arrayStringDigit, width);
         return arrayStringDigit;
     }
 
