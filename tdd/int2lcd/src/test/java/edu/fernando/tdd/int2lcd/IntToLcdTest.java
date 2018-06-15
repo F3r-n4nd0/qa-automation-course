@@ -154,6 +154,17 @@ public class IntToLcdTest {
                 "| |_ "
         };
         Assert.assertArrayEquals(result, expected);
+    }
 
+    @Test
+    public void testConvertLargeIntegerToArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(123456789);
+        String[] expected = new String[] {
+                "    _  _       _   _  _   _   _  ",
+                " |  _| _| |_| |_  |_   | |_| |_| ",
+                " | |_  _|   |  _| |_|  | |_|  _| "
+        };
+        Assert.assertArrayEquals(arrayStringOne, expected);
     }
 }
