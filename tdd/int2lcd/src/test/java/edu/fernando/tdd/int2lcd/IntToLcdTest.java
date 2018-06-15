@@ -77,4 +77,16 @@ public class IntToLcdTest {
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
 
+    @Test
+    public void testGivenIntegerSevenToArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(7);
+        String[] expected = new String[] {
+                "_ ",
+                " |",
+                " |"
+        };
+        Assert.assertArrayEquals(arrayStringOne, expected);
+    }
+
 }
