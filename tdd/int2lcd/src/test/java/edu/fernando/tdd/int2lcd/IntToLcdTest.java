@@ -270,7 +270,7 @@ public class IntToLcdTest {
             String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(217, height, invalidWidth);
             fail( "Is a invalid width 0");
         } catch (Exception e) {
-            Assert.assertEquals("Invalid width 0", e.getMessage());
+            Assert.assertEquals("Invalid Width 0", e.getMessage());
         }
     }
 

@@ -14,6 +14,10 @@ public class IntToLcd {
             throw new Exception("Invalid Height " + height);
         }
 
+        if (width <= 0) {
+            throw new Exception("Invalid Width " + width);
+        }
+
         if (number > 9) {
             int[] individualDigits = convertIntegerToArrayOfIndividualDigits(number);
             String[] result = new String[1+(height*2)];
