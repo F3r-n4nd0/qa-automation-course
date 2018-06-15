@@ -213,4 +213,20 @@ public class IntToLcdTest {
         };
         Assert.assertArrayEquals(expected, arrayStringOne);
     }
+
+    @Test
+    public void testConvertLargeIntegerToLargeArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        int height = 2;
+        int width = 3;
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(271, height, width);
+        String[] expected = new String[] {
+                "  ___    ___  ",
+                "     | |    | ",
+                "  ___| |    | ",
+                " |     |    | ",
+                " |___  |    | "
+        };
+        Assert.assertArrayEquals(expected, arrayStringOne);
+    }
 }
