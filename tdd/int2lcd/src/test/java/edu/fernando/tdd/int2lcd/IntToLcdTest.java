@@ -219,7 +219,7 @@ public class IntToLcdTest {
         IntToLcd intToLcs = new IntToLcd();
         int height = 2;
         int width = 3;
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(271, height, width);
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(217, height, width);
         String[] expected = new String[] {
                 "  ___    ___  ",
                 "     | |    | ",
