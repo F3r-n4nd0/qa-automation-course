@@ -14,115 +14,115 @@ public class IntToLcdTest {
                 "|",
                 "|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringOne);
     }
 
     @Test
     public void testGivenIntegerTwoToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(2);
+        String[] arrayStringTwo = intToLcs.convertIntegerToArrayOfStrings(2);
         String[] expected = new String[] {
                 " _ ",
                 " _|",
                 "|_ "
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringTwo);
     }
 
     @Test
     public void testGivenIntegerThreeToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(3);
+        String[] arrayStringThree = intToLcs.convertIntegerToArrayOfStrings(3);
         String[] expected = new String[] {
                 "_ ",
                 "_|",
                 "_|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringThree);
     }
 
     @Test
     public void testGivenIntegerFourToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(4);
+        String[] arrayStringFour = intToLcs.convertIntegerToArrayOfStrings(4);
         String[] expected = new String[] {
                 "   ",
                 "|_|",
                 "  |"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringFour);
     }
 
     @Test
     public void testGivenIntegerFiveToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(5);
+        String[] arrayStringFive = intToLcs.convertIntegerToArrayOfStrings(5);
         String[] expected = new String[] {
                 " _ ",
                 "|_ ",
                 " _|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringFive);
     }
 
     @Test
     public void testGivenIntegerSixToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(6);
+        String[] arrayStringSix = intToLcs.convertIntegerToArrayOfStrings(6);
         String[] expected = new String[] {
                 " _ ",
                 "|_ ",
                 "|_|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringSix);
     }
 
     @Test
     public void testGivenIntegerSevenToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(7);
+        String[] arrayStringSeven = intToLcs.convertIntegerToArrayOfStrings(7);
         String[] expected = new String[] {
                 "_ ",
                 " |",
                 " |"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringSeven);
     }
 
     @Test
     public void testGivenIntegerEightToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(8);
+        String[] arrayStringEight = intToLcs.convertIntegerToArrayOfStrings(8);
         String[] expected = new String[] {
                 " _ ",
                 "|_|",
                 "|_|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringEight);
     }
 
     @Test
     public void testGivenIntegerNineToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(9);
+        String[] arrayStringNine = intToLcs.convertIntegerToArrayOfStrings(9);
         String[] expected = new String[] {
                 " _ ",
                 "|_|",
                 " _|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringNine);
     }
 
     @Test
     public void testGivenIntegerZeroToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
-        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(0);
+        String[] arrayStringZero = intToLcs.convertIntegerToArrayOfStrings(0);
         String[] expected = new String[] {
                 " _ ",
                 "| |",
                 "|_|"
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringZero);
     }
 
 
@@ -131,7 +131,7 @@ public class IntToLcdTest {
         IntToLcd intToLcs = new IntToLcd();
         int[] arrayIndividualDigits = intToLcs.convertIntegerToArrayOfIndividualDigits(123456789);
         int[] expected = new int[] {1,2,3,4,5,6,7,8,9};
-        Assert.assertArrayEquals(arrayIndividualDigits, expected);
+        Assert.assertArrayEquals(expected, arrayIndividualDigits);
     }
 
     @Test
@@ -153,7 +153,7 @@ public class IntToLcdTest {
                 "|  _|",
                 "| |_ "
         };
-        Assert.assertArrayEquals(result, expected);
+        Assert.assertArrayEquals(expected, result);
     }
 
     @Test
@@ -165,7 +165,7 @@ public class IntToLcdTest {
                 " |  _| _| |_| |_  |_   | |_| |_| ",
                 " | |_  _|   |  _| |_|  | |_|  _| "
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringOne);
     }
 
     @Test
@@ -179,7 +179,7 @@ public class IntToLcdTest {
                 " ___|",
                 "|___ "
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringOne);
     }
 
     @Test
@@ -195,7 +195,7 @@ public class IntToLcdTest {
                 "|  ",
                 "|_ "
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringOne);
     }
 
     @Test
@@ -211,6 +211,6 @@ public class IntToLcdTest {
                 "|    ",
                 "|___ "
         };
-        Assert.assertArrayEquals(arrayStringOne, expected);
+        Assert.assertArrayEquals(expected, arrayStringOne);
     }
 }
