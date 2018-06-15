@@ -27,4 +27,14 @@ public class IntToLcd {
         }
         return new String[0];
     }
+
+    public int[] convertIntegerToArrayOfIndividualDigits(int largeInteger) {
+        int len = Integer.toString(largeInteger).length();
+        int[] arrayIndividualDigits = new int[len];
+        for (int index = (len - 1); index >= 0; index--) {
+            arrayIndividualDigits[index] = largeInteger % 10;
+            largeInteger /= 10;
+        }
+        return arrayIndividualDigits;
+    }
 }
