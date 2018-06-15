@@ -9,7 +9,23 @@ public class IntToLcdTest {
     public void testGivenIntegerOneToArrayOfStrings() {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(1);
-        String[] expected = new String[] {"","|","|"};
+        String[] expected = new String[] {
+                "",
+                "|",
+                "|"
+        };
+        Assert.assertArrayEquals(arrayStringOne, expected);
+    }
+
+    @Test
+    public void testGivenIntegerTwoToArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(2);
+        String[] expected = new String[] {
+                " _ ",
+                " _|",
+                "|_ "
+        };
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
 
