@@ -3,6 +3,8 @@ package edu.fernando.tdd.int2lcd;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.fail;
+
 public class IntToLcdTest {
 
     @Test
@@ -245,4 +247,18 @@ public class IntToLcdTest {
         };
         Assert.assertArrayEquals(expected, arrayStringOne);
     }
+
+    @Test
+    public void testConvertLargeIntegerWithInvalidHeight() {
+        IntToLcd intToLcs = new IntToLcd();
+        int invalidHeight = 0;
+        int width = 3;
+        try {
+            String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(217, invalidHeight, width);
+            fail( "Is a invalid height 0");
+        } catch (Exception e) {
+            Assert.assertEquals("Invalid Height 0", e.getMessage());
+        }
+    }
+
 }
