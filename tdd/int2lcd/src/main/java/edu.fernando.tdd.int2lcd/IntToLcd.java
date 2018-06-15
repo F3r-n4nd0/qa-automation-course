@@ -93,27 +93,27 @@ public class IntToLcd {
 
     private String addWidth(String text, int width) {
         char[] chars = text.toCharArray();
-        char[] newChars;
-        switch (chars.length) {
-            case 1:
-                return text;
+        int originalLen = chars.length;
+        if (width == 1 || originalLen == 1) {
+            return text;
+        }
+        char[] newChars = new char[width + (originalLen - 1)];
+        switch (originalLen) {
             case 2:
-                newChars = new char[width + 1];
                 for (int index = 0; index < width; index++) {
                     newChars[index] = chars[0];
                 }
                 newChars[width] = chars[1];
-                return String.valueOf(newChars);
+                break;
             case 3:
-                newChars = new char[width + 2];
                 newChars[0] = chars[0];
                 for (int index = 0; index < width; index++) {
                     newChars[index + 1] = chars[1];
                 }
                 newChars[width+1] = chars[2];
-                return String.valueOf(newChars);
+                break;
         }
-        return "";
+        return String.valueOf(newChars);
     }
 
 }
