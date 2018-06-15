@@ -3,8 +3,11 @@ package edu.fernando.tdd.int2lcd;
 public class IntToLcd {
 
     public String[] convertIntegerToArrayOfStrings(int number) {
-        if (number == 1) {
-            return new String[] {"","|","|"};
+        switch (number) {
+            case 1:
+                return new String[] {"","|","|"};
+            case 2:
+                return new String[] {" _ ", " _|", "|_ "};
         }
         return new String[0];
     }
