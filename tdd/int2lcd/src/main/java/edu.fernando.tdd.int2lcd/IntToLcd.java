@@ -18,9 +18,7 @@ public class IntToLcd {
             }
             result = mergeTwoArraysOfString(result,new String[] {"","",""});
             return result;
-
         }
-
         String[] arrayStringDigit;
         switch (number) {
             case 1:
@@ -57,9 +55,8 @@ public class IntToLcd {
                 arrayStringDigit = new String[0];
                 break;
         }
-
         arrayStringDigit = convertArrayStringDigitWithWidth(arrayStringDigit, width);
-
+        arrayStringDigit = convertArrayStringDigitWithHeight(arrayStringDigit, height);
         return arrayStringDigit;
     }
 
@@ -91,6 +88,29 @@ public class IntToLcd {
         return arrayConverted;
     }
 
+    public String[] convertArrayStringDigitWithHeight(String[] arrayStringDigit, int height) {
+        if (height == 1) {
+            return arrayStringDigit;
+        }
+        int len =  arrayStringDigit.length;
+        int newTotalHeight = 1 + (height * 2);
+        String[] arrayConverted = new String[newTotalHeight];
+        arrayConverted[0] =  arrayStringDigit[0];
+        int totalIndex = 1;
+        for (int index = 0; index < height -1; index++) {
+            arrayConverted[totalIndex] = removeMiddle(arrayStringDigit[1]);
+            totalIndex++;
+        }
+        arrayConverted[totalIndex] = arrayStringDigit[1];
+        totalIndex++;
+        for (int index = 0; index < height -1; index++) {
+            arrayConverted[totalIndex] = removeMiddle(arrayStringDigit[2]);
+            totalIndex++;
+        }
+        arrayConverted[totalIndex] = arrayStringDigit[2];
+        return arrayConverted;
+    }
+
     private String addWidth(String text, int width) {
         char[] chars = text.toCharArray();
         int originalLen = chars.length;
@@ -114,6 +134,19 @@ public class IntToLcd {
                 break;
         }
         return String.valueOf(newChars);
+    }
+
+    private String removeMiddle(String text) {
+        char[] chars = text.toCharArray();
+        int originalLen = chars.length;
+        switch (originalLen) {
+            case 3:
+                for (int index = 1; index < originalLen -1; index++) {
+                    chars[index] = " ".charAt(0);
+                }
+                break;
+        }
+        return  String.valueOf(chars);
     }
 
 }
