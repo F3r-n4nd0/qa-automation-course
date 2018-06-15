@@ -5,11 +5,11 @@ public class IntToLcd {
     public String[] convertIntegerToArrayOfStrings(int number) {
         switch (number) {
             case 1:
-                return new String[] {"","|","|"};
+                return new String[] {" ","|","|"};
             case 2:
                 return new String[] {" _ ", " _|", "|_ "};
             case 3:
-                return new String[] {" _ ", " _|", " _|"};
+                return new String[] {"_ ", "_|", "_|"};
         }
         return new String[0];
     }
