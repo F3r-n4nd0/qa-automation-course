@@ -10,6 +10,8 @@ public class IntToLcd {
                 return new String[] {" _ ", " _|", "|_ "};
             case 3:
                 return new String[] {"_ ", "_|", "_|"};
+            case 4:
+                return new String[] {"   ", "|_|", "  |"};
         }
         return new String[0];
     }
