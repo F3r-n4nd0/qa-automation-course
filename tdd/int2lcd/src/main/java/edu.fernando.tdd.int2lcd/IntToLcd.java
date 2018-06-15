@@ -142,6 +142,11 @@ public class IntToLcd {
         char[] chars = text.toCharArray();
         int originalLen = chars.length;
         switch (originalLen) {
+            case 2:
+                for (int index = 0; index < originalLen -1; index++) {
+                    chars[index] = " ".charAt(0);
+                }
+                break;
             case 3:
                 for (int index = 1; index < originalLen -1; index++) {
                     chars[index] = " ".charAt(0);
