@@ -133,4 +133,27 @@ public class IntToLcdTest {
         int[] expected = new int[] {1,2,3,4,5,6,7,8,9};
         Assert.assertArrayEquals(arrayIndividualDigits, expected);
     }
+
+    @Test
+    public void testMergeTwoArrayOfString() {
+        IntToLcd intToLcs = new IntToLcd();
+        String[] firstArray = new String[] {
+                " ",
+                "|",
+                "|"
+        };
+        String[] secondArray = new String[] {
+                " _ ",
+                " _|",
+                "|_ "
+        };
+        String[] result = intToLcs.mergeTwoArraysOfString(firstArray, secondArray);
+        String[] expected = new String[] {
+                "   _ ",
+                "|  _|",
+                "| |_ "
+        };
+        Assert.assertArrayEquals(result, expected);
+
+    }
 }
