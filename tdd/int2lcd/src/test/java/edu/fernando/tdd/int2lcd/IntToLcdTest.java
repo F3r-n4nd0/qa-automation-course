@@ -113,4 +113,16 @@ public class IntToLcdTest {
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
 
+    @Test
+    public void testGivenIntegerZeroToArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(0);
+        String[] expected = new String[] {
+                " _ ",
+                "| |",
+                "|_|"
+        };
+        Assert.assertArrayEquals(arrayStringOne, expected);
+    }
+
 }
