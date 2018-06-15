@@ -3,6 +3,12 @@ package edu.fernando.tdd.int2lcd;
 public class IntToLcd {
 
     public String[] convertIntegerToArrayOfStrings(int number) {
+        int defaultHeight = 1;
+        int defaultWidth = 1;
+        return convertIntegerToArrayOfStrings(number,defaultHeight,defaultWidth);
+    }
+
+    public String[] convertIntegerToArrayOfStrings(int number, int height, int width) {
         if (number > 9) {
             int[] individualDigits = convertIntegerToArrayOfIndividualDigits(number);
             String[] result = new String[] {"","",""};
@@ -14,29 +20,47 @@ public class IntToLcd {
             return result;
 
         }
+
+        String[] arrayStringDigit;
         switch (number) {
             case 1:
-                return new String[] {" ","|","|"};
+                arrayStringDigit = new String[] {" ","|","|"};
+                break;
             case 2:
-                return new String[] {" _ ", " _|", "|_ "};
+                arrayStringDigit = new String[] {" _ ", " _|", "|_ "};
+                break;
             case 3:
-                return new String[] {"_ ", "_|", "_|"};
+                arrayStringDigit = new String[] {"_ ", "_|", "_|"};
+                break;
             case 4:
-                return new String[] {"   ", "|_|", "  |"};
+                arrayStringDigit = new String[] {"   ", "|_|", "  |"};
+                break;
             case 5:
-                return new String[] {" _ ", "|_ ", " _|"};
+                arrayStringDigit = new String[] {" _ ", "|_ ", " _|"};
+                break;
             case 6:
-                return new String[] {" _ ", "|_ ", "|_|"};
+                arrayStringDigit = new String[] {" _ ", "|_ ", "|_|"};
+                break;
             case 7:
-                return new String[] {"_ ", " |", " |"};
+                arrayStringDigit = new String[] {"_ ", " |", " |"};
+                break;
             case 8:
-                return new String[] {" _ ", "|_|", "|_|"};
+                arrayStringDigit = new String[] {" _ ", "|_|", "|_|"};
+                break;
             case 9:
-                return new String[] {" _ ", "|_|", " _|"};
+                arrayStringDigit = new String[] {" _ ", "|_|", " _|"};
+                break;
             case 0:
-                return new String[] {" _ ", "| |", "|_|"};
+                arrayStringDigit = new String[] {" _ ", "| |", "|_|"};
+                break;
+            default:
+                arrayStringDigit = new String[0];
+                break;
         }
-        return new String[0];
+
+        arrayStringDigit = convertArrayStringDigitWithWidth(arrayStringDigit, width);
+
+        return arrayStringDigit;
     }
 
     public int[] convertIntegerToArrayOfIndividualDigits(int largeInteger) {
@@ -57,4 +81,39 @@ public class IntToLcd {
         }
         return arrayMerged;
     }
+
+    public String[] convertArrayStringDigitWithWidth(String[] arrayStringDigit, int width) {
+        int len =  arrayStringDigit.length;
+        String[] arrayConverted = new String[len];
+        for (int index = 0; index < len; index++) {
+            arrayConverted[index] = addWidth(arrayStringDigit[index],width);
+        }
+        return arrayConverted;
+    }
+
+    private String addWidth(String text, int width) {
+        char[] chars = text.toCharArray();
+        char[] newChars;
+        switch (chars.length) {
+            case 1:
+                return text;
+            case 2:
+                newChars = new char[width + 1];
+                for (int index = 0; index < width; index++) {
+                    newChars[index] = chars[0];
+                }
+                newChars[width] = chars[1];
+                return String.valueOf(newChars);
+            case 3:
+                newChars = new char[width + 2];
+                newChars[0] = chars[0];
+                for (int index = 0; index < width; index++) {
+                    newChars[index + 1] = chars[1];
+                }
+                newChars[width+1] = chars[2];
+                return String.valueOf(newChars);
+        }
+        return "";
+    }
+
 }
