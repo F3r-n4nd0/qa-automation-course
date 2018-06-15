@@ -11,12 +11,12 @@ public class IntToLcd {
     public String[] convertIntegerToArrayOfStrings(int number, int height, int width) {
         if (number > 9) {
             int[] individualDigits = convertIntegerToArrayOfIndividualDigits(number);
-            String[] result = new String[] {"","",""};
+            String[] result = new String[1+(height*2)];
             for (int singleNumber: individualDigits) {
-                String[] arrayStringDigit = convertIntegerToArrayOfStrings(singleNumber);
+                String[] arrayStringDigit = convertIntegerToArrayOfStrings(singleNumber, height, width);
                 result = mergeTwoArraysOfString(result,arrayStringDigit);
             }
-            result = mergeTwoArraysOfString(result,new String[] {"","",""});
+            result = mergeTwoArraysOfString(result,new String[1+(height*2)]);
             return result;
         }
         String[] arrayStringDigit;
@@ -74,7 +74,9 @@ public class IntToLcd {
         int len =  firstArray.length;
         String[] arrayMerged = new String[len];
         for (int index = 0; index < len; index++) {
-            arrayMerged[index] = firstArray[index] + " " + secondArray[index];
+            String firstDigit = firstArray[index] == null ? "" :  firstArray[index];
+            String secondDigit = secondArray[index] == null ? "" :  secondArray[index];
+            arrayMerged[index] = firstDigit + " " + secondDigit;
         }
         return arrayMerged;
     }
