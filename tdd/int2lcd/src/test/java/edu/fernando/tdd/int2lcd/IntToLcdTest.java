@@ -10,7 +10,7 @@ public class IntToLcdTest {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(1);
         String[] expected = new String[] {
-                "",
+                " ",
                 "|",
                 "|"
         };
@@ -34,9 +34,9 @@ public class IntToLcdTest {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(3);
         String[] expected = new String[] {
-                " _ ",
-                " _|",
-                " _|"
+                "_ ",
+                "_|",
+                "_|"
         };
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
