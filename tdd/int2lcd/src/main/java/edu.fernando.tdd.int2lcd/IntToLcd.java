@@ -37,4 +37,13 @@ public class IntToLcd {
         }
         return arrayIndividualDigits;
     }
+
+    public String[] mergeTwoArraysOfString(String[] firstArray, String[] secondArray) {
+        int len =  firstArray.length;
+        String[] arrayMerged = new String[len];
+        for (int index = 0; index < len; index++) {
+            arrayMerged[index] = firstArray[index] + " " + secondArray[index];
+        }
+        return arrayMerged;
+    }
 }
