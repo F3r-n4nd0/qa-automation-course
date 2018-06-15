@@ -8,7 +8,7 @@ import static org.junit.Assert.fail;
 public class IntToLcdTest {
 
     @Test
-    public void testGivenIntegerOneToArrayOfStrings() {
+    public void testGivenIntegerOneToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(1);
         String[] expected = new String[] {
@@ -20,7 +20,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerTwoToArrayOfStrings() {
+    public void testGivenIntegerTwoToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringTwo = intToLcs.convertIntegerToArrayOfStrings(2);
         String[] expected = new String[] {
@@ -32,7 +32,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerThreeToArrayOfStrings() {
+    public void testGivenIntegerThreeToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringThree = intToLcs.convertIntegerToArrayOfStrings(3);
         String[] expected = new String[] {
@@ -44,7 +44,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerFourToArrayOfStrings() {
+    public void testGivenIntegerFourToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringFour = intToLcs.convertIntegerToArrayOfStrings(4);
         String[] expected = new String[] {
@@ -56,7 +56,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerFiveToArrayOfStrings() {
+    public void testGivenIntegerFiveToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringFive = intToLcs.convertIntegerToArrayOfStrings(5);
         String[] expected = new String[] {
@@ -68,7 +68,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerSixToArrayOfStrings() {
+    public void testGivenIntegerSixToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringSix = intToLcs.convertIntegerToArrayOfStrings(6);
         String[] expected = new String[] {
@@ -80,7 +80,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerSevenToArrayOfStrings() {
+    public void testGivenIntegerSevenToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringSeven = intToLcs.convertIntegerToArrayOfStrings(7);
         String[] expected = new String[] {
@@ -92,7 +92,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerEightToArrayOfStrings() {
+    public void testGivenIntegerEightToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringEight = intToLcs.convertIntegerToArrayOfStrings(8);
         String[] expected = new String[] {
@@ -104,7 +104,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerNineToArrayOfStrings() {
+    public void testGivenIntegerNineToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringNine = intToLcs.convertIntegerToArrayOfStrings(9);
         String[] expected = new String[] {
@@ -116,7 +116,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerZeroToArrayOfStrings() {
+    public void testGivenIntegerZeroToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringZero = intToLcs.convertIntegerToArrayOfStrings(0);
         String[] expected = new String[] {
@@ -159,7 +159,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testConvertLargeIntegerToArrayOfStrings() {
+    public void testConvertLargeIntegerToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(123456789);
         String[] expected = new String[] {
@@ -171,7 +171,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerTwoWithWidthThreeToArrayOfStrings() {
+    public void testGivenIntegerTwoWithWidthThreeToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         int height = 1;
         int width = 3;
@@ -185,7 +185,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerTwoWithHeightTwoToArrayOfStrings() {
+    public void testGivenIntegerTwoWithHeightTwoToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         int height = 2;
         int width = 1;
@@ -201,7 +201,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerTwoWithHeightTwoAndWidthThreeToArrayOfStrings() {
+    public void testGivenIntegerTwoWithHeightTwoAndWidthThreeToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         int height = 2;
         int width = 3;
@@ -217,7 +217,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testConvertLargeIntegerToLargeArrayOfStrings() {
+    public void testConvertLargeIntegerToLargeArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         int height = 2;
         int width = 3;
@@ -233,7 +233,7 @@ public class IntToLcdTest {
     }
 
     @Test
-    public void testGivenIntegerThreeWithHeightTwoAndWidthThreeToArrayOfStrings() {
+    public void testGivenIntegerThreeWithHeightTwoAndWidthThreeToArrayOfStrings() throws Exception {
         IntToLcd intToLcs = new IntToLcd();
         int height = 2;
         int width = 3;

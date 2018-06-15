@@ -2,13 +2,18 @@ package edu.fernando.tdd.int2lcd;
 
 public class IntToLcd {
 
-    public String[] convertIntegerToArrayOfStrings(int number) {
+    public String[] convertIntegerToArrayOfStrings(int number) throws Exception {
         int defaultHeight = 1;
         int defaultWidth = 1;
         return convertIntegerToArrayOfStrings(number,defaultHeight,defaultWidth);
     }
 
-    public String[] convertIntegerToArrayOfStrings(int number, int height, int width) {
+    public String[] convertIntegerToArrayOfStrings(int number, int height, int width) throws Exception {
+
+        if (height <= 0) {
+            throw new Exception("Invalid Height " + height);
+        }
+
         if (number > 9) {
             int[] individualDigits = convertIntegerToArrayOfIndividualDigits(number);
             String[] result = new String[1+(height*2)];
