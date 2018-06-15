@@ -11,6 +11,13 @@ public class Main {
         for (String text: numberArrayString) {
             System.out.println(text);
         }
+        System.out.println("Large Number");
+        int randomHeight = ThreadLocalRandom.current().nextInt(0, 7);
+        int randomWidth = ThreadLocalRandom.current().nextInt(0, 7);
+        String[] numberArrayStringLarge = int2lcd.convertIntegerToArrayOfStrings(randomNum,randomHeight,randomWidth);
+        for (String text: numberArrayStringLarge) {
+            System.out.println(text);
+        }
     }
 
 }
