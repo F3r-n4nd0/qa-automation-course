@@ -29,4 +29,16 @@ public class IntToLcdTest {
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
 
+    @Test
+    public void testGivenIntegerThreeToArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(3);
+        String[] expected = new String[] {
+                " _ ",
+                " _|",
+                " _|"
+        };
+        Assert.assertArrayEquals(arrayStringOne, expected);
+    }
+
 }
