@@ -197,4 +197,20 @@ public class IntToLcdTest {
         };
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
+
+    @Test
+    public void testGivenIntegerTwoWithHeightTwoAndWidthThreeToArrayOfStrings() {
+        IntToLcd intToLcs = new IntToLcd();
+        int height = 2;
+        int width = 3;
+        String[] arrayStringOne = intToLcs.convertIntegerToArrayOfStrings(2 , height, width);
+        String[] expected = new String[] {
+                " ___ ",
+                "    |",
+                " ___|",
+                "|    ",
+                "|___ "
+        };
+        Assert.assertArrayEquals(arrayStringOne, expected);
+    }
 }
