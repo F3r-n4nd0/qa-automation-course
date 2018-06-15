@@ -125,4 +125,12 @@ public class IntToLcdTest {
         Assert.assertArrayEquals(arrayStringOne, expected);
     }
 
+
+    @Test
+    public void testConvertLargeIntegerIntoArrayOfIndividualDigits() {
+        IntToLcd intToLcs = new IntToLcd();
+        int[] arrayIndividualDigits = intToLcs.convertIntegerToArrayOfIndividualDigits(123456789);
+        int[] expected = new int[] {1,2,3,4,5,6,7,8,9};
+        Assert.assertArrayEquals(arrayIndividualDigits, expected);
+    }
 }
